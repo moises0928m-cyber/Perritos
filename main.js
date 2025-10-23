@@ -1,7 +1,7 @@
 async function traerPerritos() {
     try {
-        let respuesta = await axios("https://dog.ceo/api/breed/hound/images");
-        let perritosContainer = document.querySelector("#perritos-container");
+        let respuesta = await axios("https://dog.ceo/api/breeds/image/random/10");
+        let perritosContainer = document.querySelector("#random-dogs");
         
         perritosContainer.innerHTML = "";
         
@@ -28,3 +28,10 @@ async function traerPerritos() {
 }
 
 traerPerritos();
+
+async function cargarPerritosAleatorios() {
+    let res = await fetch("https://dog.ceo/api/breeds/image/random/10");
+    const data = await res.json();
+    traerPerritos("random-dogs", data.message);
+}
+cargarPerritosAleatorios();
