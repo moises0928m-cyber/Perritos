@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perritos App 🐶</title>
+<script type="module" src="./main.js" defer></script>
+<link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-gray-900 text-white flex justify-center py-3">
+  <div class="w-full max-w-md border border-blue-400 rounded-xl p-2 space-y-8">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center border border-blue-400 rounded-md px-3 py-2">
+      <div class="font-semibold text-center w-full">🐾 logo</div>
+      <button class="absolute right-6 top-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Sección 1: Perritos aleatorios -->
+    <section>
+      <h2 class="text-center font-semibold mb-3">Perritos aleatorios</h2>
+      <div id="random-dogs" class="grid grid-cols-2 gap-2"></div>
+    </section>
+
+    
+
+  </div>
+
+</body>
+</html>
