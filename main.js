@@ -1,3 +1,8 @@
+import { cargarSubrazas } from "./subraza.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  cargarSubrazas();
+});
 async function traerPerritos() {
     try {
         let respuesta = await axios("https://dog.ceo/api/breeds/image/random/10");
@@ -29,9 +34,12 @@ async function traerPerritos() {
 
 traerPerritos();
 
+
+
 async function cargarPerritosAleatorios() {
     let res = await fetch("https://dog.ceo/api/breeds/image/random/10");
     const data = await res.json();
     traerPerritos("random-dogs", data.message);
 }
 cargarPerritosAleatorios();
+
